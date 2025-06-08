@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자기소개</title>
+  <style>
+    body {
+      font-family: 'Helvetica', sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #666;
+      font-weight: normal;
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .profile-img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      margin-top: 20px;
+    }
+
+    .info strong {
+      display: inline-block;
+      width: 80px;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+     <!-- 🎵 배경음악 자동재생 (loop) -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+    브라우저가 오디오 태그를 지원하지 않습니다.
+  </audio>
+  <div class="container">
+    <center>
+      <img src="https://thumbnail.laftel.net/items/home/64df0e22-fa51-4125-8535-4bdb65a5d044.jpg?webp=0&w=760&c=0%2C0%2C640%2C360"프로필 사진" class="profile-img" />
+      <img id="profileImage" src="https://mblogthumb-phinf.pstatic.net/MjAyMzA5MjhfOTIg/MDAxNjk1ODgzODQ2Njk3.GtKpM6QvEahnFmzY_dtDsaiINgwkpzbeBkv_S-TwczAg._7Vxntfk-PQmx-OUdsG1XJBbtqd1n_EvV6SWtBEKE_Eg.JPEG.jellyfish1312/%EC%95%BC%EB%A7%88%EB%8B%A4%EA%B5%B0%EA%B3%BC%EB%A0%88%EB%B2%A899%EC%9D%98%EC%82%AC%EB%9E%91%EC%9D%84%ED%95%98%EB%8B%A412.jpg?type=w800" alt="프로필 사진" class="profile-img" style="cursor: pointer;" />
+
+<style>
+  .profile-img {
+    width: 150px;
+    border-radius: 50%;
+    transition: opacity 0.5s ease;
+  }
+
+  .fade-out {
+    opacity: 0;
+  }
+</style>
+
+<script>
+  const images = [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2WYahBuN2rE00Xul2ZzZJo_XK9yPhdvSG5I7WqBhI6Bh6bWeMuuX7DuxC1ayxJXGFmCg&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyXAaP0FD4A_my1-F3dcPNtIyiWBqcWp1kis-X1z5SjLxuDuex7ro39ZiJeVVbkAgd9FI&usqp=CAU=두번째",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSITAP-8k40KvMTrj1zKFwEA-ene2lDG1HxVA&s=세번째"
+  ];
+
+  let currentIndex = 0;
+  const profileImage = document.getElementById("profileImage");
+
+  profileImage.addEventListener("click", () => {
+    // 페이드 아웃
+    profileImage.classList.add("fade-out");
+
+    // 약간 기다린 후 이미지 변경 + 페이드 인
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      profileImage.src = images[currentIndex];
+      profileImage.classList.remove("fade-out");
+    }, 300); // 0.3초 후 이미지 교체
+ });
+</script>
+
+      <h1>아키토 야마다</h1>
+      <h2>고등학생</h2>
+    </center>
+    
+    <div class="info">
+      <p><strong>이메일:</strong> akito_yamada@example.com</p>
+      <p><strong>전화:</strong> 010-3813-8222</p>
+      <p><strong>주소:</strong> 일본</p>
+    </div>
+
+    <h3>소개</h3>
+    <p>
+      안녕하세요! 저는 이예나 제일 좋앙요
+      배가고파요
+    </p>
+
+    <h3>취미</h3>
+    <ul>
+      <li>이예나랑 넷플에서 만나기</li>
+      <li>학교가기</li>
+      <li>게임하기</li>
+      <li>똥싸기</li>
+    </ul>
+  </div>
+</body>
+</html>
